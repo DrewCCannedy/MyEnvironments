@@ -39,11 +39,14 @@ cd ../
 sudo apt-get -y install python3
 
 # java
-apt-get -y install default-jdk
+sudo apt-get -y install default-jdk
 java_path="$(readlink -f $(which java))"
 java_path=${java_path%"bin/java"}
 echo -e "\nJAVA_HOME=$java_path" | sudo tee -a /etc/environment 
 source /etc/environment
+
+# maven
+sudo apt -y install maven
 
 # node
 curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
