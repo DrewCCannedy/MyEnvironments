@@ -55,5 +55,5 @@ sudo apt-get install -y nodejs
 # cleanup
 sudo apt-get -y install -f
 sudo apt -y autoremove
-echo -e "\nProcess Completed"
+echo -e "\nProcess Completed. Restart to apply path changes."
 
