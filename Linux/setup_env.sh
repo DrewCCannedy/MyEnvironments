@@ -12,7 +12,7 @@ else
 fi
 
 sudo apt-get -y update
-sudo apt -y install curl
+sudo apt -y install build-essential dkms
 
 # vscode
 wget https://update.code.visualstudio.com/latest/linux-deb-x64/stable
@@ -42,7 +42,7 @@ sudo apt-get -y install python3
 sudo apt-get -y install default-jdk
 java_path="$(readlink -f $(which java))"
 java_path=${java_path%"bin/java"}
-echo -e "\nJAVA_HOME=$java_path" | sudo tee -a /etc/environment 
+echo "JAVA_HOME=$java_path" | sudo tee -a /etc/environment 
 source /etc/environment
 
 # maven
